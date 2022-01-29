@@ -111,7 +111,6 @@ apps:
     command: microk8s-dbctl.wrapper
 
 parts:
-
   raft:
     source: https://github.com/canonical/raft
     build-attributes: [no-patchelf]
@@ -522,7 +521,6 @@ parts:
       - python3-click
       - python3-dateutil
 
-
   microk8s-addons:
     plugin: dump
     build-attributes: [no-patchelf]
@@ -537,7 +535,6 @@ parts:
       . build-scripts/set-env-variables.sh
       python3 build-scripts/fetch-addons.py
       snapcraftctl build
-
 
   microk8s:
     plugin: dump
@@ -589,7 +586,6 @@ parts:
 
       snapcraftctl build
 
-
   juju:
     plugin: dump
     source: https://launchpad.net/juju/2.9/2.9.0/+download/juju-2.9.0-k8s.tar.xz
@@ -598,7 +594,6 @@ parts:
       juju: bin/juju
     prime:
       - bin/juju
-
 
 slots:
   microk8s:
